@@ -1,0 +1,21 @@
+# Hongliang Dai
+
+I am a third year CS PhD student at the Hong Kong University of Science and Technology, advised by <a href="https://www.cse.ust.hk/~yqsong/" target="_blank">Yangqiu Song</a>. My research focuses on the application of weak supervision in NLP, Fine-grained Entity Typing, and Entity Linking.
+
+**Email**: hdai@cse.ust.hk
+
+## Publications
+
+* **Improving Fine-grained Entity Typing with Entity Linking** <br>
+Hongliang Dai, Donghong Du, Xin Li, Yangqiu Song. *EMNLP*, 2019.
+* **Neural Aspect and Opinion Term Extraction with Mined Rules as Weak Supervision** <br>
+Hongliang Dai and Yangqiu Song. *ACL*, 2019.
+* **Entity Linking within a Social Media Platform: A Case Study on Yelp** <br>
+Hongliang Dai, Yangqiu Song, Liwei Qiu, and Rijia Liu. *EMNLP*, 2018.
+
+Before PhD:
+
+* **Entity Mention Aware Document Representation** <br>
+Hongliang Dai, Siliang Tang, Fei Wu, and Yueting Zhuang. *Information Sciences*, 2018.
+* **Propagation Based Prototype Prediction** <br>
+Tonghua Su, Hongliang Dai, Ce Liu, Lijun Yu. *ICDAR*, 2017.
