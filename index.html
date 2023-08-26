@@ -1,19 +1,104 @@
 <html>
 <head>
-<title>Hongliang Dai</title>
 <style>
-    ul li { margin-bottom: 10px; }
-	p img {vertical-align: bottom;}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 25px;
+}
+
+.tab-buttons {
+float: right;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+.main {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 2px 4px;
+  border-top: none;
+}
+
+.photo {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 810px;
+}
 </style>
-<meta charset="UTF-8">
+<script>
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+  
+  if (cityName == "entab") {
+	document.getElementById("enbtn").style.borderBottom = "5px solid";
+	document.getElementById("cnbtn").style.borderBottom = "";
+  }
+  if (cityName == "cntab") {
+	document.getElementById("enbtn").style.borderBottom = "";
+	document.getElementById("cnbtn").style.borderBottom = "5px solid";
+  }
+}
+</script>
 </head>
 <body>
 
-<div style="width:800px; margin:0 auto;">
 
-<h1 id="hongliangdai">Hongliang Dai (戴洪良)</h1>
 
-<p><img src="hldai19.jpg" width="120" align="right" title="The sun was too bright. My eyes aren't that small.">I am an assistant professor at the Nanjing University of Aeronautics and Astronautics. Previously, I worked at ByteDance and Tencent Jarvis Lab (2021-2023). I received my PhD degree in CS from the Hong Kong University of Science and Technology in 2021 under the advising of Prof.
+<div class="tab" style="width:800px; margin:0 auto;">
+<span id="myname" style="font-size:35px;font-weight:bold;">Hongliang Dai (戴洪良)</span>
+<div class="tab-buttons">
+  <button class="tablinks active" onclick="openCity(event, 'entab')" id="enbtn" style="border-bottom:5px solid;">English</button>
+  <button class="tablinks" onclick="openCity(event, 'cntab')" id="cnbtn">中文</button>
+ </div>
+</div>
+
+<div class="main">
+<!-- Tab content -->
+<div id="entab" class="tabcontent" style="display:block">
+
+<p>I am an assistant professor at the Nanjing University of Aeronautics and Astronautics. Previously, I worked at ByteDance and Tencent Jarvis Lab (2021-2023). I received my PhD degree in CS from the Hong Kong University of Science and Technology in 2021 under the advising of Prof.
     <a href="https://www.cse.ust.hk/~yqsong/" target="_blank">Yangqiu Song</a>.
      I obtained my Master's degree from Zhejiang University, and Bachelor's degree from Harbin Institute of Technology.
     </p>
@@ -58,6 +143,19 @@
 Tonghua Su, <strong>Hongliang Dai</strong>, Ce Liu, Lijun Yu. <em>ICDAR</em>, 2017.</li>
 </ul>
 
+</div>
+
+<div id="cntab" class="tabcontent">
+  <p>南京航空航天大学副研究员。此前曾就职于字节跳动和腾讯天衍实验室(2021-2023)。2021年在香港科技大学获博士学位，导师是
+    Prof. <a href="https://www.cse.ust.hk/~yqsong/" target="_blank">Yangqiu Song</a>。分别在浙江大学和哈尔滨工业大学获硕士和学士学位。
+    </p>
+	
+<p> 研究方向：信息抽取、NLP中的小样本学习和弱监督训练。</p>
+</div>
+
+<div class="photo">
+<img src="hldai19.jpg" width="120" title="Me. A few years ago.">
+</div>
 </div>
 
 </body>
